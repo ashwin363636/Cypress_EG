@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<testsuites>
+<testsuite name="Root Suite" timestamp="2024-04-23T05:35:53" tests="1" file="cypress/e2e/EG_Tests/Dropdown.cy.js" time="3.853" failures="0">
+  
+  <testcase name="visit" time="3.824" classname="visit"></testcase>
+  
+</testsuite>
+
+</testsuites>

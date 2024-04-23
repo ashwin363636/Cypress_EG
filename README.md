@@ -1,2 +1,2 @@
 # Cypress_EG
-Demonstrate Cypress features
+Demonstrate Cypress features.

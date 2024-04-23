@@ -1,0 +1,32 @@
+{
+  "name": "cypress_eg",
+  "version": "1.0.0",
+  "description": "Demonstrate Cypress features",
+  "main": "./app/task.js",
+  "scripts": {
+    "start_app": "node ./app/server.js",
+    "prettier": "prettier --write 'cypress/**/*.js'",
+    "delete:reports": "rm -r cypress/results/* || true",
+    "prereport": "npm run delete:reports",
+    "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
+    "junit:merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
+    "cypress:open": "npm run prettier && npm run prereport && npx cypress open && npm run junit:merge && npm run mochawesome:merge",
+    "cypress:run": "npm run prettier && npm run prereport && npx cypress run && npm run junit:merge && npm run mochawesome:merge"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.8.0"
+  },
+  "devDependencies": {
+    "cypress-multi-reporters": "^1.6.4",
+    "eslint-plugin-prettier": "^5.1.3",
+    "junit-merge": "^2.0.0",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "prettier": "3.2.5"
+  }
+}
