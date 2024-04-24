@@ -68,6 +68,7 @@ export class HomePage {
   }
 
   openCourseTab() {
+    //cy.get('#opentab').invoke('removeAttr', 'target').click()
     cy.get('#opentab').then((newTab) => {
       const hrefTab = newTab.prop('href')
       cy.visit('https://www.easygenerator.com/en/')
