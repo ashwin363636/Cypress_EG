@@ -28,15 +28,14 @@ describe('Invoke an alert/confirmation modal', () => {
       )
     })
 
-    it.only('Using cy.task() to read text from a file to invoke the alert', async () => {
-      const stub = await cy.task(
-        'fileread',
-        './cypress/fixtures/alert_text.txt',
-      )
-      homePage.getConfirmAlertText(
-        stub,
-        `Hello ${stub}, Are you sure you want to confirm?`,
-      )
+    it('Using cy.task() to read text from a file to invoke the alert', async () => {
+      cy.task('fileread', './cypress/fixtures/alert_text.txt').then(($str) =>{
+        homePage.getSimpleAlertText(
+          $str,
+          `Hello ${$str}, share this practice page and share your knowledge`,
+        )
+      })
+      
     })
   })
 })

@@ -16,3 +16,11 @@ Features of the framework:
 * Retries on test failures
 * Few complex scenaios like, handling Alert, Childwindow, Cross origin and Iframes
 
+Upcoming Changes:
+* Convert the project to a type script project
+* Use Docker to run the tests in CI/CD
+
+
+
+
+

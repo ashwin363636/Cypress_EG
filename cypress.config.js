@@ -38,10 +38,11 @@ module.exports =  defineConfig({
       });
       // implement node event listeners here
       on('task',{
-        async fileread(filename)
+         fileread(filename)
          {
           try {
-            return await fs.readFileSync("/path/to/file", "encoding-type");
+            const textContent =  fs.readFileSync(filename);
+            return textContent.toString().replace(/(\r\n|\n|\r)/gm, "")
         
           } catch (err) {
             console.log("Error---------------------- " + err);
