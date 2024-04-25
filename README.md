@@ -17,7 +17,7 @@ Features of the framework:
 * Few complex scenaios like, handling Alert, Childwindow, Cross origin and Iframes
 
 Upcoming Changes:
-* Convert the project to a type script project
+* Convert the project to a type script project - Inprogess
 * Use Docker to run the tests in CI/CD
 
 
