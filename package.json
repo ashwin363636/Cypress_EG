@@ -4,8 +4,8 @@
   "description": "Demonstrate Cypress features",
   "main": "./app/task.js",
   "scripts": {
-    "start_app": "node ./app/server.js",
-    "prettier": "prettier --write 'cypress/**/*.js'",
+    "start_app": "node ./app/server.ts",
+    "prettier": "prettier --write 'cypress/**/*.ts'",
     "cypress:open": "npm run prettier && npx cypress open",
     "cypress:run": "npm run prettier && npx cypress run"
   },
