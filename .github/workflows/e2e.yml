@@ -19,24 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4.0.2
-        with:
-          build: npm install
-          start: npm run start_app
-        
-      - name: Start EG App
-        uses: actions/checkout@v4
-        with:
-          build: npm install
-          start: npm run start_app
-          
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
-        with:
-          build: npm install
-          start: npm run cypress:run
-          
+      - name: Setup Node.js environment and run Cypress tests
+      - uses: actions/setup-node@v4.0.2
+      - uses: actions/checkout@v4
+      - uses: cypress-io/github-action@v6
+      - run: npm install
+      - run: npm run cypress:run
+      - run: npm run start_app
+
 
       - name: Archive test report
         if: always()
