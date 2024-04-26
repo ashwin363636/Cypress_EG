@@ -26,14 +26,14 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
         with:
-          build: npm run build
+          build: npm install
           start: npm run start_app
         
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
+          build: npm run install
           start: npm run cypress:run
           
 
