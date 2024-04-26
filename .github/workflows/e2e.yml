@@ -16,9 +16,6 @@ jobs:
       - name: Download NodeJS
         uses: actions/setup-node@v4.0.2
 
-      - name: Get Cypress
-        uses: cypress-io/github-action@v6
-
       - name: Install dependencies
         run: npm install
       
