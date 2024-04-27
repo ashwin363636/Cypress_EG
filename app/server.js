@@ -9,7 +9,7 @@ http.createServer((req,res) =>{
     fs.readFile(filePath, async(err, data) =>{
         if(err){
             res.writeHead(500);
-            await console.log(err)
+             console.log(err)
             res.end('Error loading html file');
             return;
         }

@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { homePage } from '../../support/pageobjects/homepage'
+import { homePage } from '../../support/pageobjects/homePage'
 
 describe('Show - hide field test', () => {
   beforeEach(() => {
@@ -7,13 +7,13 @@ describe('Show - hide field test', () => {
   })
 
   it('Alternate between show and hide field option', () => {
-    let str = 'test'
+    let str: string = 'test'
     homePage
       .enterValueInShowHideField(str)
-      .VerifyShowHideFieldIsVisibleAndContainsValue(str)
+      .VerifyShowHideFieldIsVisibleAndContainsValue()
       .hideField()
-      .VerifyShowHideFieldIsHiddenAndContainsValue(str)
+      .VerifyShowHideFieldIsHiddenAndContainsValue()
       .showField()
-      .VerifyShowHideFieldIsVisibleAndContainsValue(str)
+      .VerifyShowHideFieldIsVisibleAndContainsValue()
   })
 })

@@ -1,19 +1,19 @@
 /// <reference types="cypress" />
-import { createCoursePage } from '../../support/pageobjects/createCoursePage'
+import { createCoursePage } from './createCoursePage'
 
 export class HomePage {
-  selectDropdownOptionAs(option) {
+  selectDropdownOptionAs(option: string) {
     cy.get('#dropdown-class-example').select(option)
     return this
   }
 
-  verifyOptionSelectedIs(option) {
+  verifyOptionSelectedIs(option: string) {
     cy.get('#dropdown-class-example').should('have.value', option)
     return this
   }
 
-  uploadFile(filename) {
-    cy.fixture(filename, { encoding: null }).as('myfixture')
+  uploadFile(filename: string) {
+    cy.fixture(filename).as('myfixture')
     cy.get('.image-upload-wrapper > input').as('uploadField')
     cy.get('@uploadField').selectFile('@myfixture')
     cy.contains('h3', 'Upload your image here')
@@ -22,7 +22,7 @@ export class HomePage {
     return this
   }
 
-  getSimpleAlertText(str, expectedMsg) {
+  getSimpleAlertText(str: string, expectedMsg: string) {
     if (typeof str === 'string') {
       cy.get('#name').type(str)
     }
@@ -32,7 +32,7 @@ export class HomePage {
     cy.get('#alertbtn').click()
   }
 
-  getConfirmAlertText(str, expectedMsg) {
+  getConfirmAlertText(str: string, expectedMsg: string) {
     if (typeof str === 'string') {
       cy.get('#name').type(str)
     }
@@ -42,7 +42,7 @@ export class HomePage {
     cy.get('#confirmbtn').click()
   }
 
-  enterValueInShowHideField(text) {
+  enterValueInShowHideField(text: string) {
     cy.get('#displayed-text').type(text)
     return this
   }

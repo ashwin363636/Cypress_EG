@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { homePage } from '../../support/pageobjects/homepage'
+import { homePage } from '../../support/pageobjects/homePage'
 
 describe('Verify Mouse hover functionality', () => {
   beforeEach(() => {
