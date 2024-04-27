@@ -38,7 +38,7 @@ module.exports =  defineConfig({
       });
       // implement node event listeners here
       on('task',{
-         fileread(filename)
+         fileread(filename: string)
          {
           try {
             const textContent =  fs.readFileSync(filename);

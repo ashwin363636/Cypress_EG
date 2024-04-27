@@ -12,7 +12,7 @@ Steps to run Tests:
 Features of the framework:
 * The Project has implemented prettier and eslint
 * it has implmented task to run node.js package utilities(to read a .txt file)
-* Mochaawesome reports -> cypress/reports/html/index.html
+* Mochaawesome reports with screenshots on failure -> cypress/reports/html/index.html
 * Retries on test failures
 * Few complex scenaios like, handling Alert, Childwindow, Cross origin and Iframes
 

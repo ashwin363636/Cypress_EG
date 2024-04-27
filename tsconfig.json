@@ -1,44 +1,43 @@
 {
-    "compilerOptions": {
-      "target": "ES2022",
-      "module": "NodeNext",
-      "lib": [
-        "es2022"
-      ],
-      "outDir": "dist",
-      "noEmit": true,
-      "declaration": false,
-      "strict": false,
-      "esModuleInterop": false,
-      "skipLibCheck": false,
-      "noImplicitAny": false,
-      "strictNullChecks": false,
-      "noImplicitThis": false,
-      "alwaysStrict": false,
-      "noUnusedLocals": false,
-      "noUnusedParameters": false,
-      "noImplicitReturns": false,
-      "noFallthroughCasesInSwitch": false,
-      "forceConsistentCasingInFileNames": false,
-      "inlineSourceMap": false,
-      "inlineSources": false,
-      "experimentalDecorators": false,
-      "strictPropertyInitialization": false,
-      "resolveJsonModule": false,
-      "typeRoots": [
-        "./typings",
-        "./node_modules/@types"
-      ],
-      "allowJs": true,
-      "rootDir": ".",
-    },
-    "include": [
-      "cypress/**/*",
-      "app/**/*"
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "lib": [
+      "es2022"
     ],
-    "exclude": [
-      "node_modules",
-      "dist"
-    ]
-  }
-  
+    "outDir": "dist",
+    "noEmit": true,
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "./typings",
+      "./node_modules/@types"
+    ],
+    "allowJs": true,
+    "rootDir": ".",
+  },
+  "include": [
+    "cypress/**/*",
+    "app/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
