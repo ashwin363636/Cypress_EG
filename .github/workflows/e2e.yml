@@ -9,7 +9,7 @@ on:
 jobs:
   cypress:
     name: Test
-    runs-on: macOS
+    runs-on: macos-latest
 
     steps:
       - name: Download repository
