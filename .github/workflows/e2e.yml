@@ -8,7 +8,10 @@ on:
 
 jobs:
   cypress:
-    runs-on: ubuntu-latest
+
+    name: Test
+    runs-on: macOS
+
     steps:
       - name: Download repository
         uses: actions/checkout@v4
