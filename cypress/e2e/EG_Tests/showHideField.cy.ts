@@ -1,9 +1,10 @@
-/// <reference types="cypress" />
-import { homePage } from '../../support/pageobjects/homePage'
+import { HomePage } from '../../support/pageobjects/homePage'
+import { landingPage } from '../../support/pageobjects/landingPage'
 
 describe('Show - hide field test', () => {
+  let homePage: HomePage
   beforeEach(() => {
-    cy.visit('/')
+    homePage = landingPage.launchApp()
   })
 
   it('Alternate between show and hide field option', () => {

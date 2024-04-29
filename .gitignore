@@ -1,4 +1,6 @@
 mochaawesome-report
 mochawesome.json
 node_modules
+cypress/reports/*
+cypress/e2e/.DS_Store
 

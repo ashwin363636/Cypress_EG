@@ -17,6 +17,7 @@ Features of the framework:
 * Mochaawesome reports with screenshots on failure -> cypress/reports/html/index.html
 * Retries on test failures
 * Designed few complex scenaios like handling Alert, Childwindow, Cross origin and Iframes.
+* Used Dotenv utility to read env variables from .env file
 
 
 

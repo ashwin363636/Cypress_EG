@@ -7,7 +7,7 @@
     "start_app": "node ./app/server.js",
     "prettier": "prettier --write 'cypress/**/*.ts'",
     "cypress:open": "npm run start_app & npm run prettier && npx cypress open",
-    "cypress:run": "npm run start_app & npm run prettier && npx cypress run"
+    "cypress:run": "npm run prettier && npx cypress run"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-multi-reporters": "^1.6.4",
+    "dotenv": "^16.4.5",
     "eslint-plugin-prettier": "^5.1.3",
     "junit-merge": "^2.0.0",
     "mocha": "^10.4.0",

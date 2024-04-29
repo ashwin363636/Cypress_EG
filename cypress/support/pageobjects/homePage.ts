@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { createCoursePage } from './createCoursePage'
+import { CreateCoursePage, createCoursePage } from './createCoursePage'
 
 export class HomePage {
   selectDropdownOptionAs(option: string) {
@@ -71,8 +71,7 @@ export class HomePage {
     //cy.get('#opentab').invoke('removeAttr', 'target').click()
     cy.get('#opentab').then((newTab) => {
       const hrefTab = newTab.prop('href')
-      cy.visit('https://www.easygenerator.com/en/')
-      createCoursePage.verifyCreateCoursePageOpen()
+      cy.visit(Cypress.env('eg_url'))
     })
     return createCoursePage
   }
@@ -97,6 +96,18 @@ export class HomePage {
   goToTop() {
     cy.contains('Top').click()
     cy.window().should('have.property', 'top')
+    return this
+  }
+
+  goToHome() {
+    cy.get('a > .btn').click({ force: true })
+    return createCoursePage
+  }
+
+  interceptURL(urlToBeintercepted: string) {
+    cy.intercept('POST', urlToBeintercepted, {
+      fixture: 'stubResponse.json',
+    }).as('stubbedResponse')
     return this
   }
 }
