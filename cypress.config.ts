@@ -1,10 +1,15 @@
+/// <reference types="cypress" />
 const { defineConfig } = require('cypress')
 const fs = require("fs");
 const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
+require('dotenv').config()
 
 module.exports =  defineConfig({
 
   reporter: 'cypress-mochawesome-reporter',
+  env: {
+    eg_url: process.env.EG_URL
+  },
   reporterOptions: {
     charts: true,
     reportPageTitle: 'custom-title',
@@ -20,9 +25,11 @@ module.exports =  defineConfig({
     runMode: 2,
     openMode: 0
   },
+
+ 
   
   e2e: {
-    baseUrl: 'http://localhost:3001',
+    baseUrl: process.env.BASE_URL,
     specPattern: 'cypress/e2e/**/*.ts',
     excludeSpecPattern: '**/examples/*',
     setupNodeEvents(on, config) {
@@ -30,6 +37,7 @@ module.exports =  defineConfig({
       on('before:run', async (details) => {
         console.log('override before:run');
         await beforeRunHook(details);
+       
       });
 
       on('after:run', async () => {

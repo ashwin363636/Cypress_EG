@@ -1,9 +1,10 @@
-/// <reference types="cypress" />
-import { homePage } from '../../support/pageobjects/homePage'
+import { HomePage } from '../../support/pageobjects/homePage'
+import { landingPage } from '../../support/pageobjects/landingPage'
 
 describe('Verify Mouse hover functionality', () => {
+  let homePage: HomePage
   beforeEach(() => {
-    cy.visit('/')
+    homePage = landingPage.launchApp()
   })
 
   it('Validate functionality of top option using mouse hover', () => {

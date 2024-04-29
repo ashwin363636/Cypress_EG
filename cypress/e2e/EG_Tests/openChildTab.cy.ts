@@ -1,9 +1,10 @@
-/// <reference types="cypress" />
-import { homePage } from '../../support/pageobjects/homePage'
+import { HomePage } from '../../support/pageobjects/homePage'
+import { landingPage } from '../../support/pageobjects/landingPage'
 
 describe('Verify opening of child tab', () => {
+  let homePage: HomePage
   beforeEach(() => {
-    cy.visit('/')
+    homePage = landingPage.launchApp()
   })
 
   it('Deleting target attribute to open child tab', () => {

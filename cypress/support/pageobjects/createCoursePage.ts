@@ -1,7 +1,8 @@
 /// <reference types="cypress" />
+
 export class CreateCoursePage {
   verifyCreateCoursePageOpen() {
-    cy.origin('https://www.easygenerator.com/en/', () => {
+    cy.origin(Cypress.env('eg_url'), () => {
       cy.contains('Login')
     })
     return this

@@ -1,9 +1,10 @@
-/// <reference types="cypress" />
-import { homePage } from '../../support/pageobjects/homePage'
+import { HomePage } from '../../support/pageobjects/homePage'
+import { landingPage } from '../../support/pageobjects/landingPage'
 
 describe('Dropdown tests', () => {
+  let homePage: HomePage
   beforeEach(() => {
-    cy.visit('/')
+    homePage = landingPage.launchApp()
   })
 
   it('verify multiple dropdown options', () => {

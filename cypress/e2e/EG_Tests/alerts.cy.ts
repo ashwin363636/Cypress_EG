@@ -1,9 +1,10 @@
-/// <reference types="cypress" />
-import { homePage } from '../../support/pageobjects/homePage'
+import { HomePage } from '../../support/pageobjects/homePage'
+import { landingPage } from '../../support/pageobjects/landingPage'
 
 describe('Invoke an alert/confirmation modal', () => {
+  let homePage: HomePage
   beforeEach(() => {
-    cy.visit('/')
+    homePage = landingPage.launchApp()
   })
   it('verify simple alert without input name', () => {
     let name: string = 'Ashwin'
