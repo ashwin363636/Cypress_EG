@@ -17,6 +17,7 @@ module.exports =  defineConfig({
     inlineAssets: true,
     saveAllAttempts: false,
   },
+  projectId: "rnrvqp",
   viewportHeight: 1080,
   viewportWidth: 1920,
   chromeWebSecurity: false,
