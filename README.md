@@ -18,6 +18,7 @@ Features of the framework:
 * Retries on test failures
 * Designed few complex scenaios like handling Alert, Childwindow, Cross origin and Iframes.
 * Used Dotenv utility to read env variables from .env file
+* Integrated the project with Cypress Dashboard and used parallelisation to run tests.
 
 
 
