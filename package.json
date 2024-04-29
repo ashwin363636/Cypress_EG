@@ -7,7 +7,7 @@
     "start_app": "node ./app/server.js",
     "prettier": "prettier --write 'cypress/**/*.ts'",
     "cypress:open": "npm run start_app & npm run prettier && npx cypress open",
-    "cypress:run": "npm run prettier && npx cypress run"
+    "cypress:run": "npm run start_app & npm run prettier && npx cypress run"
   },
   "keywords": [],
   "author": "",
