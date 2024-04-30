@@ -19,6 +19,8 @@ Features of the framework:
 * Designed few complex scenaios like handling Alert, Childwindow, Cross origin and Iframes.
 * Used Dotenv utility to read env variables from .env file
 * Integrated the project with Cypress Dashboard and used parallelisation to run tests.
+* Integrated Percy.io to perform visual testing and also integrated percy with github repo and workflow.
+    --ßhttps://percy.io/44f62895/Cypress_EG
 
 
 

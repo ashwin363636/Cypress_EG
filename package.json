@@ -7,7 +7,7 @@
     "start_app": "node ./app/server.js",
     "prettier": "prettier --write 'cypress/**/*.ts'",
     "cypress:open": "npm run start_app & npm run prettier && npx cypress open",
-    "cypress:run": "npm run start_app & npm run prettier && npx cypress run  --record --key 70df42d8-3776-4faf-aaa9-df7057798a96 --parallel"
+    "cypress:run": "npm run start_app & npm run prettier && npx percy exec -- cypress run  --record --key 70df42d8-3776-4faf-aaa9-df7057798a96 --parallel --ci-build-id 435"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,8 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@percy/cli": "^1.28.5",
+    "@percy/cypress": "^3.1.2",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-multi-reporters": "^1.6.4",
