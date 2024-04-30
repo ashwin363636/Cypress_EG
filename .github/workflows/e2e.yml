@@ -25,7 +25,7 @@ jobs:
       - name: Run Cypress tests
         run: npm run cypress:run
         env:
-          PERCY_TOKEN: $
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
       - name: Archive test report
         if: always()
